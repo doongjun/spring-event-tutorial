@@ -1,4 +1,4 @@
-package com.tutorial.event.events.refresh
+package com.tutorial.event.events.refreshed
 
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationListener
