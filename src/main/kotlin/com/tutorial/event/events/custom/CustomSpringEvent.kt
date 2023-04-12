@@ -1,4 +1,4 @@
-package com.tutorial.event.events
+package com.tutorial.event.events.custom
 
 import org.springframework.context.ApplicationEvent
 

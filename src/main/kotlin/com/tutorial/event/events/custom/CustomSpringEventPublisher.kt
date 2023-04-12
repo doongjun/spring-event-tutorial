@@ -1,4 +1,4 @@
-package com.tutorial.event.events
+package com.tutorial.event.events.custom
 
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationEventPublisher
