@@ -1,6 +1,5 @@
-package com.tutorial.event.events
+package com.tutorial.event.events.custom
 
-import com.tutorial.event.events.custom.CustomSpringEvent
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Component
