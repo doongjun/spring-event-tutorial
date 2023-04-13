@@ -1,4 +1,4 @@
-package com.tutorial.event.events.custom
+package com.tutorial.event.springevents
 
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationEventPublisher
@@ -14,5 +14,11 @@ class CustomSpringEventPublisher(
         log.info("Publishing custom event")
         val customSpringEvent = CustomSpringEvent(this, message)
         applicationEventPublisher.publishEvent(customSpringEvent)
+    }
+
+    fun publishGenericSpringEvent(message: String, success: Boolean) {
+        log.info("Publishing generic event")
+        val genericSpringEvent: GenericSpringEvent<String> = GenericStringSpringEvent(message, success)
+        applicationEventPublisher.publishEvent(genericSpringEvent)
     }
 }
