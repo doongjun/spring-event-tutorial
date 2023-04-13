@@ -1,5 +1,6 @@
 package com.tutorial.event.events.framework
 
+import com.tutorial.event.events.framework.generic.GenericSpringEvent
 import org.slf4j.LoggerFactory
 import org.springframework.context.event.ContextStartedEvent
 import org.springframework.context.event.EventListener
@@ -12,5 +13,10 @@ class AnnotationDrivenEventListener {
     @EventListener
     fun handleContextStart(event: ContextStartedEvent) {
         log.info("Handling context started event.")
+    }
+
+    @EventListener(condition = "#event.success")
+    fun handleSuccessful(event: GenericSpringEvent<String>) {
+        log.info("Handling generic event (conditional).")
     }
 }
