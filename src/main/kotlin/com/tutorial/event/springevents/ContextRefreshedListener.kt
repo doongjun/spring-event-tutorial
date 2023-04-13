@@ -10,7 +10,13 @@ import org.springframework.stereotype.Component
 class ContextRefreshedListener: ApplicationListener<ContextRefreshedEvent> {
     private val log = LoggerFactory.getLogger(javaClass)
 
+    // for tests
+    private var hitContextRefreshedHandler = false
+
     override fun onApplicationEvent(event: ContextRefreshedEvent) {
         log.info("Handling context re-freshed event.")
+        hitContextRefreshedHandler = true
     }
+
+    fun isHitContextRefreshedHandler() = hitContextRefreshedHandler
 }
